@@ -2,8 +2,11 @@ orig = 600851475143
 
 lim = int(orig ** 0.5)
 def is_prime(n):
+    if n == 0 or n == 1:
+        return False
     nlim = int(n ** 0.5)
-    for i in xrange(2, nlim):
+
+    for i in xrange(2, nlim+1):
         if n % i == 0:
             # not prime number
             return False
